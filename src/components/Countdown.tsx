@@ -3,7 +3,17 @@ import { CountdownContext } from '../contexts/CountdownContext'
 import styles from '../styles/components/Countdown.module.css'
 
 export function Countdown() {
-  const { minutes, seconds, hasFinished, isActive, startCountdown, resetCountdown } = useContext(CountdownContext)
+  const { 
+    minutes, 
+    seconds, 
+    hasFinished, 
+    isActive, 
+    startCountdown, 
+    resetCountdown, 
+    pomodoro,
+    shortBreak,
+    longBreak
+  } = useContext(CountdownContext)
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
@@ -20,6 +30,12 @@ export function Countdown() {
           <span>{secondLeft}</span>
           <span>{secondRight}</span>
         </div>
+      </div>
+
+      <div className={styles.optionsBarContainer}>
+        <button className={styles.optionsButton} onClick={pomodoro}>Pomodoro</button>
+        <button className={styles.optionsButton} onClick={shortBreak}>Break Curto</button>
+        <button className={styles.optionsButton} onClick={longBreak}>Break Longo</button>
       </div>
 
       {hasFinished ? (
