@@ -4,6 +4,7 @@
   font-family: Rajdhani;
   font-weight: 600;
   color: var(--title);
+  margin-top: 3rem;
 }
 
 .countdownContainer > div {
@@ -82,7 +83,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .optionsButton {
@@ -96,8 +97,11 @@
   border: 0;
   border-radius: 5px;
 
-  background: #b3b9ff;
-  color: var(--white);
+  /* background: #b3b9ff;
+  color: var(--white); */
+
+  background: var(--white);
+  color: var(--title);
 
   font-size: 1rem;
   font-weight: 500;
@@ -106,5 +110,5 @@
 }
 
 .optionsButton:hover {
-  background: #b3b9ffc0;
+  color: var(--blue-dark);
 }

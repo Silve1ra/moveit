@@ -10,6 +10,7 @@ import { CountdownProvider } from '../contexts/CountdownContext'
 
 import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
+import { CoffeePlayer } from '../components/CoffeePlayer'
 
 interface HomeProps {
   level: number,
@@ -39,6 +40,7 @@ export default function Home(props:HomeProps) {
               <Countdown />
             </div>
             <div>
+              <CoffeePlayer />
               <ChallengeBox />
             </div>
           </section>
